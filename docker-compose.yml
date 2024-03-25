@@ -13,8 +13,8 @@ services:
         source: ./secrets/id_rsa.pub
         target: /root/.ssh/authorized_keys
     ports:
-      - "3000:3000" # Map Container port 3000 to Host port 3000 (Web)
-      - "2223:2223" # Map Container port 2223 to Host port 2223 (SSH)
+      - "3000:3000" 
+      - "2223:2223" 
 
   managedhost-app-2:
     build: 
@@ -28,8 +28,8 @@ services:
         source: ./secrets/id_rsa.pub
         target: /root/.ssh/authorized_keys
     ports:
-      - "3001:3000" # Map Container port 3000 to Host port 3001 (Web)
-      - "2224:2224" # Map Container port 2224 to Host port 2224 (SSH)
+      - "3001:3000" 
+      - "2224:2224" 
 
   managedhost-app-3:
     build: 
