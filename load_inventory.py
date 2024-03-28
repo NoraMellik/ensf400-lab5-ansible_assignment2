@@ -1,13 +1,13 @@
 import ansible_runner
 
-def ping_hosts():
+def ping():
     results = ansible_runner.run(
         private_data_dir='.', 
         playbook='ping.yml'
     )
     
     if results.status == "successful":
-        print("Ping successful to all hosts.")
+        print("Ping successful.")
     else:
         print("Ping failed.")
 
@@ -15,4 +15,4 @@ def ping_hosts():
         print(f"Host: {host}, Stats: {stats}")
 
 if __name__ == "__main__":
-    ping_hosts()
+    ping()
